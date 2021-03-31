@@ -42,6 +42,6 @@ X1:=CayleyGraph(s,M);
 
 A1:=AdjacencyMatrixCayleyGraph(Elements(s),M);
 
-Display(PlotGraph(A1));
+PlotGraph(A1));
 
 end;
