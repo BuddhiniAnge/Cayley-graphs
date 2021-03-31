@@ -2,7 +2,7 @@
 
 PrintHamCycle:=function(arg)
 
-local g1,g2,k1,k2;
+global g1,g2,k1,k2;
 
 g1:=arg[1]; #cyclic subgroup (not normal) which is a factor of the semidirect product
 g2:=DirectProduct(arg[2],arg[2]); #subgroup (normal) which is a factor of the semidirect product
