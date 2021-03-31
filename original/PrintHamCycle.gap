@@ -30,3 +30,4 @@ LoadPackage("grape");
 X:=CayleyGraph(s,SForGraph);
 
 Display(X);
+
