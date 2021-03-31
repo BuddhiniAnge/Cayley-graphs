@@ -2,7 +2,7 @@
 
 PrintHamCycle:=function(arg)
 
-local f,g,m,k,k1,gen,Auts,AutsOfOrdq,ExHom,s,N,M,X;
+local f,g,m,k,k1,gen,Auts,AutsOfOrdq,ExHom,s,N,M,X1,A1;
 
 f:=arg[1]; #cyclic subgroup (not normal) which is a factor of the semidirect product
 m:=arg[2]; #subgroup (normal) which is a factor of the semidirect product
@@ -15,10 +15,12 @@ N:=[];
 
 M:=[];
 
-X:=[];
+X1:=[];
 
-LoadPackage("grape");
+LoadPackage("grape"); 
+LoadPackage("JupyterViz");
 Read("original/UndirectedGeneratingSets.gap");
+Read("original/AdjacencyMatrixCayleyGraph.gap");
 
 g:=DirectProduct(m,m);
 
@@ -36,8 +38,12 @@ N:=IrredUndirGenSetsUpToAut(s);
 
 M:=N[k1];
 
-X:=CayleyGraph(s,M);
+X1:=CayleyGraph(s,M);
 
-Display(X);
+Display(X1);
+
+A1:=AdjacencyMatrixCayleyGraph(Elements(s),M);
+
+PlotGraph(A1);
 
 end;
