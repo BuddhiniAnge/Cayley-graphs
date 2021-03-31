@@ -2,7 +2,7 @@
 
 PrintHamCycle:=function(arg)
 
-local f,g,m,k,k1,gen,Auts,AutsOfOrdq,ExHom,s,S,M,X;
+local f,g,m,k,k1,gen,Auts,AutsOfOrdq,ExHom,s,N,M,X;
 
 f:=arg[1]; #cyclic subgroup (not normal) which is a factor of the semidirect product
 m:=arg[2]; #subgroup (normal) which is a factor of the semidirect product
@@ -11,7 +11,7 @@ k1:=arg[4]; #which generating set is to be selected
 
 s:=[]; 
 
-S:=[];
+N:=[];
 
 M:=[];
 
@@ -33,9 +33,9 @@ s:=SemidirectProduct(f,ExHom,g);
 
 Read("original/UndirectedGeneratingSets.gap");
 
-S:=IrredUndirGenSetsUpToAut(s);
+N:=IrredUndirGenSetsUpToAut(s);
 
-M:=S[k1];
+M:=N[k1];
 
 X:=CayleyGraph(s,M);
 
