@@ -40,10 +40,8 @@ M:=N[k1];
 
 X1:=CayleyGraph(s,M);
 
-Display(X1);
-
 A1:=AdjacencyMatrixCayleyGraph(Elements(s),M);
 
-PlotGraph(A1);
+Display(PlotGraph(A1));
 
 end;
