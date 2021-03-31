@@ -18,6 +18,7 @@ M:=[];
 X:=[];
 
 LoadPackage("grape");
+Read("original/UndirectedGeneratingSets.gap");
 
 g:=DirectProduct(m,m);
 
@@ -30,8 +31,6 @@ AutsOfOrdq:=Filtered(Elements(Auts),elt->Order(elt)=Order(f));
 ExHom:=GroupHomomorphismByImages(f,Auts,[gen],[AutsOfOrdq[k]]);
 
 s:=SemidirectProduct(f,ExHom,g);
-
-Read("original/UndirectedGeneratingSets.gap");
 
 N:=IrredUndirGenSetsUpToAut(s);
 
