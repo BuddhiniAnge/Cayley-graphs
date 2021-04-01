@@ -12,7 +12,7 @@ k1:=arg[4]; #which generating set is to be selected
 
 LoadPackage("grape");
 LoadPackage("JupyterViz");
-Read("original/AdjacencyMatrix.gap");
+Read("original/AdjacencyMatrixCayleyGraph.gap");
 Read("original/UndirectedGeneratingSets.gap");
 
 g:=DirectProduct(m,m);
